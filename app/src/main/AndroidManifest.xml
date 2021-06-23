@@ -46,9 +46,7 @@
 
         <!--META-DATA DECLARATIONS ======================================================================================================-->
         <!--Key injected from a properties file, with the gradle manifest placeholders-->
-        <meta-data
-                android:name="io.fabric.ApiKey"
-                android:value="${fabric_api_key}" />
+
         <!--=============================================================================================================================-->
     </application>
 
