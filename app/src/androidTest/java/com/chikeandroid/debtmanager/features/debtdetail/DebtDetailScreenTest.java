@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
 /**
  * Created by Chike on 4/29/2017.
  */
-@RunWith(AndroidJUnit4.class)
+//@RunWith(AndroidJUnit4.class)
 public class DebtDetailScreenTest {
 
     //private PersonDebtsRepository mDebtsRepository;

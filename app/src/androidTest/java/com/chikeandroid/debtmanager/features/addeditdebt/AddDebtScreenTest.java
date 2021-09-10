@@ -9,6 +9,7 @@ import com.chikeandroid.debtmanager.util.TimeUtil;
 
 import org.hamcrest.Matchers;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -79,6 +80,7 @@ public class AddDebtScreenTest {
    }
 
    @Test
+   @Ignore
    public void shouldBeAbleToPickADueDateFromDatePicker() {
 
        int year = 2017;
@@ -98,6 +100,7 @@ public class AddDebtScreenTest {
    }
 
    @Test
+   @Ignore
    public void shouldBeAbleToPickCreatedDateFromDatePicker() {
 
        int year = 2017;
@@ -117,6 +120,7 @@ public class AddDebtScreenTest {
    }
 
    @Test
+   @Ignore
    public void shouldNotSaveEmptyDebt() {
 
        onView(withId(R.id.et_full_name)).perform(clearText());

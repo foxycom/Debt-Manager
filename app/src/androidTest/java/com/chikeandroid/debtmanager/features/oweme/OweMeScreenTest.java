@@ -19,6 +19,7 @@ import com.chikeandroid.debtmanager.util.TimeUtil;
 import org.hamcrest.Matchers;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -87,6 +88,7 @@ public class OweMeScreenTest {
     }
 
     @Test
+    @Ignore
     public void shouldOpenAddDebtUiWhenAddDebtFabButtonIsClicked() {
 
         onView(withId(R.id.fab_main)).perform(click());
@@ -95,6 +97,7 @@ public class OweMeScreenTest {
     }
 
     @Test
+    @Ignore
     public void shouldBeAbleToAddANewDebtToOweMeList() {
 
         createDebt(NAME1, PHONE_NUMBER1, AMOUNT1, NOTE1, Debt.DEBT_TYPE_OWED);
@@ -109,6 +112,7 @@ public class OweMeScreenTest {
     }
 
     @Test
+    @Ignore
     public void shouldOpenDebtDetailUiWhenDebtIsClicked() {
 
         createDebt(NAME1, PHONE_NUMBER1, AMOUNT1, NOTE1, Debt.DEBT_TYPE_OWED);
@@ -128,6 +132,7 @@ public class OweMeScreenTest {
     }
 
     @Test
+    @Ignore
     public void shouldBeAbleToSelectAndDeleteMultipleDebtsListItemOnLongClick() {
 
         createDebt(NAME1, PHONE_NUMBER1, AMOUNT1, NOTE1, Debt.DEBT_TYPE_OWED);
@@ -155,6 +160,7 @@ public class OweMeScreenTest {
     }
 
     @Test
+    @Ignore
     public void shouldBeAbleToDeleteDebtOnDetailScreenAndThenNotShowInList() {
 
         createDebt(NAME1, PHONE_NUMBER1, AMOUNT1, NOTE1, Debt.DEBT_TYPE_OWED);
@@ -177,6 +183,7 @@ public class OweMeScreenTest {
     }
 
     @Test
+    @Ignore
     public void shouldNotShowActionModeWhenViewPagerIsSwiped() {
 
         createDebt(NAME1, PHONE_NUMBER1, AMOUNT1, NOTE1, Debt.DEBT_TYPE_OWED);
@@ -210,6 +217,7 @@ public class OweMeScreenTest {
 
     // this should be in debt detail screen
     @Test
+    @Ignore
     public void shouldBeAbleToAddPaymentToDebtAndShowInRecyclerView() {
 
         createDebt(NAME1, PHONE_NUMBER1, AMOUNT1, NOTE1, Debt.DEBT_TYPE_OWED);

@@ -18,6 +18,7 @@ import com.chikeandroid.debtmanager.util.RecyclerViewItemCountAssertion;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -72,6 +73,7 @@ public class IOweScreenTest {
     }
 
     @Test
+    @Ignore
     public void shouldOpenAddDebtUiWhenAddDebtFabButtonIsClicked() {
 
         onView(withId(R.id.fab_main)).perform(click());
@@ -80,6 +82,7 @@ public class IOweScreenTest {
     }
 
     @Test
+    @Ignore
     public void shouldBeAbleToAddANewDebtToIOweList() {
 
         createDebt(NAME1, PHONE_NUMBER1, AMOUNT1, NOTE1, Debt.DEBT_TYPE_IOWE);
@@ -94,6 +97,7 @@ public class IOweScreenTest {
     }
 
     @Test
+    @Ignore
     public void shouldOpenDebtDetailUiWhenAListIsClicked() {
 
         createDebt(NAME1, PHONE_NUMBER1, AMOUNT1, NOTE1, Debt.DEBT_TYPE_IOWE);
@@ -106,6 +110,7 @@ public class IOweScreenTest {
     }
 
     @Test
+    @Ignore
     public void shouldBeAbleToSelectAndDeleteMultipleDebtsListItemOnLongClick() {
 
         createDebt(NAME1, PHONE_NUMBER1, AMOUNT1, NOTE1, Debt.DEBT_TYPE_IOWE);
@@ -134,6 +139,7 @@ public class IOweScreenTest {
     }
 
     @Test
+    @Ignore
     public void shouldNotShowActionModeWhenViewPagerIsSwiped() {
 
         createDebt(NAME1, PHONE_NUMBER1, AMOUNT1, NOTE1, Debt.DEBT_TYPE_IOWE);
@@ -149,6 +155,7 @@ public class IOweScreenTest {
     }
 
     @Test
+    @Ignore
     public void shouldBeAbleToDeleteDebtOnDetailScreenAndThenNotShowInList() {
 
         createDebt(NAME1, PHONE_NUMBER1, AMOUNT1, NOTE1, Debt.DEBT_TYPE_IOWE);
