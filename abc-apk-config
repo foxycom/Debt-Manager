@@ -1,0 +1,9 @@
+[MakeConfiguration]
+make_app_package = org.openobservatory.ooniprobe
+make_app_debug_package = org.openobservatory.ooniprobe
+make_original_apk_path = app/build/outputs/apk/stableFdroid/debug/app-stable-fdroid-debug.apk
+make_android_test_apk_path = app/build/outputs/apk/androidTest/stableFdroid/debug/app-stable-fdroid-debug-androidTest.apk
+make_assemble_apk_command = assembleFdroid
+make_assemble_android_test_command = assembleAndroidTest
+make_test_runner = org.openobservatory.ooniprobe.test/org.openobservatory.ooniprobe.TestAndroidJUnitRunner
+make_permissions =
