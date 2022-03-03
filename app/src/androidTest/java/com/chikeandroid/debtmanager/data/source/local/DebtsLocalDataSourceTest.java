@@ -12,6 +12,7 @@ import com.chikeandroid.debtmanager.util.TestUtil;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.Ignore;
 import org.junit.runner.RunWith;
 
 import java.util.List;
@@ -30,6 +31,7 @@ import static org.hamcrest.core.Is.is;
  * Created by Chike on 4/17/2017.
  * Integration test for {@link com.chikeandroid.debtmanager.data.source.PersonDebtsDataSource}, which uses {@link com.chikeandroid.debtmanager.data.source.local.DebtsDbHelper}.
  */
+@Ignore
 @RunWith(AndroidJUnit4.class)
 public class DebtsLocalDataSourceTest {
 
