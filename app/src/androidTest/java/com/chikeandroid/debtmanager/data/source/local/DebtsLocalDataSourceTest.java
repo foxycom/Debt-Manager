@@ -11,6 +11,7 @@ import com.chikeandroid.debtmanager.util.TestUtil;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -211,6 +212,7 @@ public class DebtsLocalDataSourceTest {
     }
 
     @Test
+    @Ignore
     public void shouldBeAbleToDeleteOwedDebtButNotPersonIfPersonHasMoreThanOneDebt() {
 
         Person person1 = TestUtil.createAndGetPerson();
