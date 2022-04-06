@@ -204,7 +204,7 @@ clean-all : clean-carved-tests clean-carved-coverage clean-espresso-coverage
 app-original.apk : 
 	@export ABC_CONFIG=$(ABC_CFG) && \
 	$(GW) -PjacocoEnabled=false assembleDebug </dev/null && \
-	mv app/build/outputs/apk/app-debug.apk app-debug.apk && \
+	mv app/build/outputs/apk/debug/app-debug.apk app-debug.apk && \
 	$(ABC) sign-apk app-debug.apk && \
 	mv -v app-debug.apk app-original.apk
 
@@ -219,7 +219,7 @@ app-instrumented.apk : app-original.apk
 app-androidTest.apk :
 	@export ABC_CONFIG=$(ABC_CFG) && \
 	$(GW) assembleAndroidTest </dev/null && \
-	mv app/build/outputs/apk/app-debug-androidTest.apk app-androidTest-unsigned.apk && \
+	mv app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk app-androidTest-unsigned.apk && \
 	$(ABC) sign-apk app-androidTest-unsigned.apk && \
 	mv -v app-androidTest-unsigned.apk app-androidTest.apk
 
@@ -227,8 +227,8 @@ app-androidTest.apk :
 app-original-for-coverage.apk app-androidTest-for-coverage.apk:
 	@export ABC_CONFIG=$(ABC_CFG) && \
 	$(GW) -PjacocoEnabled=true clean assembleDebug assembleAndroidTest </dev/null && \
-	mv app/build/outputs/apk/app-debug.apk app-original-for-coverage.apk  && \
-	mv app/build/outputs/apk/app-debug-androidTest.apk app-androidTest-for-coverage.apk
+	mv app/build/outputs/apk/debug/app-debug.apk app-original-for-coverage.apk  && \
+	mv app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk app-androidTest-for-coverage.apk
 
 # Utility - TODO Maybe move this to function?
 stop-emulator:
