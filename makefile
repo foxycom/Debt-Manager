@@ -246,7 +246,7 @@ $(ESPRESSO_TESTS) : app-instrumented.apk app-androidTest.apk
 	$(eval TEST_NAME := $(shell echo "$(@)" | sed -e 's|__|\\\#|g' -e 's|.testlog||'))
 	@echo "Tracing test $(TEST_NAME)"
 #	Log directly to the expected file
-	$(ADB) shell am instrument -w -e class $(TEST_NAME) com.chikeandroid.debtmanager.develop.test/android.support.test.runner.AndroidJUnitRunner 2>&1 | tee $(@)
+	$(ADB) shell am instrument -w -e class $(TEST_NAME) com.chikeandroid.debtmanager.develop.test/androidx.test.runner.AndroidJUnitRunner 2>&1 | tee $(@)
 #	Copy the traces if the previous command succeded
 	@export ABC_CONFIG=$(ABC_CFG) && $(ABC) copy-traces com.chikeandroid.debtmanager.develop ./traces/$(TEST_NAME) force-clean
 
