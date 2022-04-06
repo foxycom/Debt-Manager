@@ -1,8 +1,8 @@
 package com.chikeandroid.debtmanager.features.debtdetail;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.v4.app.LoaderManager;
+import androidx.annotation.NonNull;
+import androidx.loader.app.LoaderManager;
 
 import com.chikeandroid.debtmanager.data.source.PersonDebtsRepository;
 import com.chikeandroid.debtmanager.features.debtdetail.loaders.DebtLoader;

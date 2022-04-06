@@ -3,7 +3,7 @@ package com.chikeandroid.debtmanager.features.addeditdebt;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.VisibleForTesting;
+import androidx.annotation.VisibleForTesting;
 
 import com.chikeandroid.debtmanager.R;
 

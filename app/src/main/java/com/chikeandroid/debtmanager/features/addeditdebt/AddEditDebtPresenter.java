@@ -1,7 +1,7 @@
 package com.chikeandroid.debtmanager.features.addeditdebt;
 
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import com.chikeandroid.debtmanager.data.Debt;
 import com.chikeandroid.debtmanager.data.Person;

@@ -1,8 +1,9 @@
 package com.chikeandroid.debtmanager.features.home.adapter;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
+import androidx.fragment.app.FragmentPagerAdapter;
 import com.chikeandroid.debtmanager.features.iowe.IOweFragment;
 import com.chikeandroid.debtmanager.features.oweme.OweMeFragment;
 import com.chikeandroid.debtmanager.features.people.PeopleFragment;
@@ -12,7 +13,7 @@ import com.chikeandroid.debtmanager.features.people.PeopleFragment;
  * PagerAdapter for MainActivity
  */
 
-public class HomeFragmentPagerAdapter extends android.support.v4.app.FragmentPagerAdapter {
+public class HomeFragmentPagerAdapter extends FragmentPagerAdapter {
 
     private final String[] mTabTitles = new String[] {"Owe Me", "I Owe", "People"};
 

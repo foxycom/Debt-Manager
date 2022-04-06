@@ -1,27 +1,27 @@
 package com.chikeandroid.debtmanager.util;
 
-import android.support.design.widget.CollapsingToolbarLayout;
-import android.support.test.espresso.contrib.PickerActions;
-import android.support.test.espresso.matcher.BoundedMatcher;
+import androidx.test.espresso.contrib.PickerActions;
+import androidx.test.espresso.matcher.BoundedMatcher;
 import android.widget.DatePicker;
 
 import com.chikeandroid.debtmanager.R;
 import com.chikeandroid.debtmanager.data.Debt;
 
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;
 import org.hamcrest.Matchers;
 
-import static android.support.test.espresso.Espresso.onView;
-import static android.support.test.espresso.action.ViewActions.click;
-import static android.support.test.espresso.action.ViewActions.closeSoftKeyboard;
-import static android.support.test.espresso.action.ViewActions.typeText;
-import static android.support.test.espresso.assertion.ViewAssertions.matches;
-import static android.support.test.espresso.matcher.ViewMatchers.isAssignableFrom;
-import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
-import static android.support.test.espresso.matcher.ViewMatchers.withClassName;
-import static android.support.test.espresso.matcher.ViewMatchers.withId;
-import static android.support.test.espresso.matcher.ViewMatchers.withText;
+import static androidx.test.espresso.Espresso.onView;
+import static androidx.test.espresso.action.ViewActions.click;
+import static androidx.test.espresso.action.ViewActions.closeSoftKeyboard;
+import static androidx.test.espresso.action.ViewActions.typeText;
+import static androidx.test.espresso.assertion.ViewAssertions.matches;
+import static androidx.test.espresso.matcher.ViewMatchers.isAssignableFrom;
+import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static androidx.test.espresso.matcher.ViewMatchers.withClassName;
+import static androidx.test.espresso.matcher.ViewMatchers.withId;
+import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static com.chikeandroid.debtmanager.util.TestUtil.AMOUNT1;
 import static com.chikeandroid.debtmanager.util.TestUtil.CREATED_DAY_OF_MONTH;
 import static com.chikeandroid.debtmanager.util.TestUtil.CREATED_MONTH;

@@ -1,16 +1,14 @@
 package com.chikeandroid.debtmanager.features.debtdetail;
 
-import android.support.test.InstrumentationRegistry;
-import android.support.test.espresso.Espresso;
-import android.support.test.rule.ActivityTestRule;
-import android.support.test.runner.AndroidJUnit4;
+import androidx.test.InstrumentationRegistry;
+import androidx.test.espresso.Espresso;
+import androidx.test.rule.ActivityTestRule;
 
 import com.chikeandroid.debtmanager.DebtManagerApplication;
 import com.chikeandroid.debtmanager.features.home.MainActivity;
 
 import org.junit.Before;
 import org.junit.Rule;
-import org.junit.runner.RunWith;
 
 /**
  * Created by Chike on 4/29/2017.

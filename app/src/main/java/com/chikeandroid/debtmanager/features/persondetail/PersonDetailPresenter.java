@@ -1,9 +1,9 @@
 package com.chikeandroid.debtmanager.features.persondetail;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.app.LoaderManager;
-import android.support.v4.content.Loader;
+import androidx.annotation.NonNull;
+import androidx.loader.app.LoaderManager;
+import androidx.loader.content.Loader;
 import android.text.TextUtils;
 
 import com.chikeandroid.debtmanager.data.Debt;

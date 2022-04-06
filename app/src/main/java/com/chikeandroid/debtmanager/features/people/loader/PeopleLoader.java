@@ -1,8 +1,8 @@
 package com.chikeandroid.debtmanager.features.people.loader;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.v4.content.AsyncTaskLoader;
+import androidx.annotation.NonNull;
+import androidx.loader.content.AsyncTaskLoader;
 
 import com.chikeandroid.debtmanager.data.Debt;
 import com.chikeandroid.debtmanager.data.Person;

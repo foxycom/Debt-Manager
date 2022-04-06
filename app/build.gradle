@@ -61,7 +61,7 @@ android {
         versionCode 2
         versionName "0.2"
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
 
         // Fetch fabric api key from relevant properties file and place it in android manifest.
 
@@ -168,29 +168,29 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation "com.android.support:appcompat-v7:26.1.0"
-    implementation "com.android.support:cardview-v7:$rootProject.supportLibraryVersion"
-    implementation "com.android.support:design:$rootProject.supportLibraryVersion"
-    implementation "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
-    compile "com.android.support:support-v4:$rootProject.supportLibraryVersion"
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation "com.google.guava:guava:$rootProject.guavaVersion"
 
     testImplementation 'org.robolectric:robolectric:4.2'
     testImplementation'org.mockito:mockito-core:2.6.3'
 
     // Android Testing Support Library's runner and rules
-    androidTestImplementation "com.android.support.test:runner:$rootProject.ext.runnerVersion"
-    androidTestImplementation "com.android.support.test:rules:$rootProject.ext.rulesVersion"
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test:rules:1.1.1'
     testImplementation "junit:junit:$rootProject.ext.junitVersion"
 
     // Espresso UI Testing dependencies.
-    androidTestImplementation "com.android.support.test.espresso:espresso-core:$rootProject.ext.espressoVersion"
-    androidTestImplementation "com.android.support.test.espresso:espresso-contrib:$rootProject.ext.espressoVersion"
-    androidTestImplementation "com.android.support.test.espresso:espresso-intents:$rootProject.ext.espressoVersion"
-    implementation "com.android.support.test.espresso:espresso-idling-resource:$rootProject.espressoVersion"
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-intents:3.1.0'
+    implementation 'androidx.test.espresso:espresso-idling-resource:3.1.0'
 
     // Dagger dependencies
-    compile "com.google.dagger:dagger:$rootProject.daggerVersion"
+    implementation "com.google.dagger:dagger:$rootProject.daggerVersion"
     annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.daggerVersion"
 
     // Dependencies for local unit tests
@@ -206,8 +206,11 @@ dependencies {
     }
 
     // Force usage of dependencies in the test app, since it is internally used by the runner module.
-    androidTestImplementation 'com.android.support:support-annotations:' + rootProject.supportLibraryVersion
-    androidTestImplementation 'com.android.support:recyclerview-v7:' + rootProject.supportLibraryVersion
+    androidTestImplementation 'androidx.annotation:annotation:1.0.0'
+    androidTestImplementation 'androidx.recyclerview:recyclerview:1.0.0'
+    androidTestImplementation 'com.google.android.material:material:1.0.0'
+    //androidTestImplementation 'com.android.support:support-annotations:' + rootProject.supportLibraryVersion
+    //androidTestImplementation 'com.android.support:recyclerview-v7:' + rootProject.supportLibraryVersion
     implementation "de.hdodenhof:circleimageview:$rootProject.circleImageVersion"
     /*
             Resolves dependency versions across test and production APKs, specifically, transitive
@@ -222,14 +225,14 @@ dependencies {
             excluding these dependencies from your test configuration will result in an dex pre-verifier error
             at runtime. More info in this tools bug: (https://code.google.com/p/android/issues/detail?id=192497)
             */
-    configurations.implementation.dependencies.each { compileDependency ->
-        println "Excluding compile dependency: ${compileDependency.getName()}"
-        configurations.androidTestImplementation.dependencies.each { androidTestCompileDependency ->
-            configurations.androidTestImplementation.exclude module: "${compileDependency.getName()}"
-        }
-    }
+//    configurations.implementation.dependencies.each { compileDependency ->
+//        println "Excluding compile dependency: ${compileDependency.getName()}"
+//        configurations.androidTestImplementation.dependencies.each { androidTestCompileDependency ->
+//            configurations.androidTestImplementation.exclude module: "${compileDependency.getName()}"
+//        }
+//    }
     implementation "org.greenrobot:eventbus:$rootProject.eventbusVersion"
-    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation "com.balysv:material-ripple:$rootProject.materialRippleVersion"
 
     // Glide

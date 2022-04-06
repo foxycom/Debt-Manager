@@ -1,6 +1,6 @@
 package com.chikeandroid.debtmanager.features.iowe;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.chikeandroid.debtmanager.base.BasePresenter;
 import com.chikeandroid.debtmanager.base.BaseView;

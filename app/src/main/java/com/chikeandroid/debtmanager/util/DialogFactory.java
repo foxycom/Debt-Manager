@@ -3,8 +3,8 @@ package com.chikeandroid.debtmanager.util;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.support.annotation.StringRes;
-import android.support.v7.app.AlertDialog;
+import androidx.annotation.StringRes;
+import androidx.appcompat.app.AlertDialog;
 
 public final class DialogFactory {
 

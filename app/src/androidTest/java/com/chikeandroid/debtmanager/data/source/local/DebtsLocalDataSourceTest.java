@@ -1,7 +1,7 @@
 package com.chikeandroid.debtmanager.data.source.local;
 
-import android.support.test.InstrumentationRegistry;
-import android.support.test.runner.AndroidJUnit4;
+import androidx.test.InstrumentationRegistry;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.chikeandroid.debtmanager.data.Debt;
 import com.chikeandroid.debtmanager.data.Payment;

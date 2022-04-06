@@ -2,8 +2,8 @@ package com.chikeandroid.debtmanager.features.people;
 
 import com.google.common.collect.Lists;
 
-import android.support.v4.app.LoaderManager;
-import android.support.v4.content.Loader;
+import androidx.loader.app.LoaderManager;
+import androidx.loader.content.Loader;
 
 import com.chikeandroid.debtmanager.data.Person;
 import com.chikeandroid.debtmanager.features.people.loader.PeopleLoader;

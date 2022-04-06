@@ -2,7 +2,7 @@ package com.chikeandroid.debtmanager.data;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 /**
  * Created by Chike on 5/24/2017.

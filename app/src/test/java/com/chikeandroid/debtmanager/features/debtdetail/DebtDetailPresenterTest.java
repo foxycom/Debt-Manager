@@ -1,7 +1,7 @@
 package com.chikeandroid.debtmanager.features.debtdetail;
 
-import android.support.v4.app.LoaderManager;
-import android.support.v4.content.Loader;
+import androidx.loader.app.LoaderManager;
+import androidx.loader.content.Loader;
 
 import com.chikeandroid.debtmanager.data.Debt;
 import com.chikeandroid.debtmanager.data.Payment;

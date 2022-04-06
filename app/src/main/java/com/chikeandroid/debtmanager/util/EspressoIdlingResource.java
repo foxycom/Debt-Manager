@@ -1,6 +1,6 @@
 package com.chikeandroid.debtmanager.util;
 
-import android.support.test.espresso.IdlingResource;
+import androidx.test.espresso.IdlingResource;
 
 /**
  * Created by Chike on 4/29/2017.

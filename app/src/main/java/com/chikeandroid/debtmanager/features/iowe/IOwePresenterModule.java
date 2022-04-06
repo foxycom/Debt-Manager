@@ -1,8 +1,8 @@
 package com.chikeandroid.debtmanager.features.iowe;
 
 import android.content.Context;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.LoaderManager;
+import androidx.fragment.app.Fragment;
+import androidx.loader.app.LoaderManager;
 
 import com.chikeandroid.debtmanager.data.source.PersonDebtsRepository;
 import com.chikeandroid.debtmanager.features.iowe.loader.IOweLoader;

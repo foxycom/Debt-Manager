@@ -2,7 +2,7 @@ package com.chikeandroid.debtmanager.features.persondetail;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
 
 import com.chikeandroid.debtmanager.base.SingleFragmentActivity;
 import com.chikeandroid.debtmanager.data.Person;
