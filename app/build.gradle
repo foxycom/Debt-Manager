@@ -167,48 +167,48 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
-    compile "com.android.support:cardview-v7:$rootProject.supportLibraryVersion"
-    compile "com.android.support:design:$rootProject.supportLibraryVersion"
-    compile "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "com.android.support:appcompat-v7:26.1.0"
+    implementation "com.android.support:cardview-v7:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:design:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
     compile "com.android.support:support-v4:$rootProject.supportLibraryVersion"
-    compile "com.google.guava:guava:$rootProject.guavaVersion"
+    implementation "com.google.guava:guava:$rootProject.guavaVersion"
 
-    testCompile 'org.robolectric:robolectric:4.2'
-    testCompile'org.mockito:mockito-core:2.6.3'
+    testImplementation 'org.robolectric:robolectric:4.2'
+    testImplementation'org.mockito:mockito-core:2.6.3'
 
     // Android Testing Support Library's runner and rules
-    androidTestCompile "com.android.support.test:runner:$rootProject.ext.runnerVersion"
-    androidTestCompile "com.android.support.test:rules:$rootProject.ext.rulesVersion"
-    testCompile "junit:junit:$rootProject.ext.junitVersion"
+    androidTestImplementation "com.android.support.test:runner:$rootProject.ext.runnerVersion"
+    androidTestImplementation "com.android.support.test:rules:$rootProject.ext.rulesVersion"
+    testImplementation "junit:junit:$rootProject.ext.junitVersion"
 
     // Espresso UI Testing dependencies.
-    androidTestCompile "com.android.support.test.espresso:espresso-core:$rootProject.ext.espressoVersion"
-    androidTestCompile "com.android.support.test.espresso:espresso-contrib:$rootProject.ext.espressoVersion"
-    androidTestCompile "com.android.support.test.espresso:espresso-intents:$rootProject.ext.espressoVersion"
-    compile "com.android.support.test.espresso:espresso-idling-resource:$rootProject.espressoVersion"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$rootProject.ext.espressoVersion"
+    androidTestImplementation "com.android.support.test.espresso:espresso-contrib:$rootProject.ext.espressoVersion"
+    androidTestImplementation "com.android.support.test.espresso:espresso-intents:$rootProject.ext.espressoVersion"
+    implementation "com.android.support.test.espresso:espresso-idling-resource:$rootProject.espressoVersion"
 
     // Dagger dependencies
     compile "com.google.dagger:dagger:$rootProject.daggerVersion"
     annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.daggerVersion"
 
     // Dependencies for local unit tests
-    testCompile "junit:junit:$rootProject.ext.junitVersion"
-    testCompile "org.mockito:mockito-all:$rootProject.ext.mockitoVersion"
-    testCompile "org.hamcrest:hamcrest-all:$rootProject.ext.hamcrestVersion"
-    testCompile "org.powermock:powermock-module-junit4:$rootProject.ext.powerMockito"
-    testCompile "org.powermock:powermock-api-mockito:$rootProject.ext.powerMockito"
+    testImplementation "junit:junit:$rootProject.ext.junitVersion"
+    testImplementation "org.mockito:mockito-all:$rootProject.ext.mockitoVersion"
+    testImplementation "org.hamcrest:hamcrest-all:$rootProject.ext.hamcrestVersion"
+    testImplementation "org.powermock:powermock-module-junit4:$rootProject.ext.powerMockito"
+    testImplementation "org.powermock:powermock-api-mockito:$rootProject.ext.powerMockito"
 
     // Stetho
-    debugCompile("com.facebook.stetho:stetho:$rootProject.ext.stethoVersion") {
+    debugImplementation("com.facebook.stetho:stetho:$rootProject.ext.stethoVersion") {
         exclude module: 'jsr305'
     }
 
     // Force usage of dependencies in the test app, since it is internally used by the runner module.
-    androidTestCompile 'com.android.support:support-annotations:' + rootProject.supportLibraryVersion
-    androidTestCompile 'com.android.support:recyclerview-v7:' + rootProject.supportLibraryVersion
-    compile "de.hdodenhof:circleimageview:$rootProject.circleImageVersion"
+    androidTestImplementation 'com.android.support:support-annotations:' + rootProject.supportLibraryVersion
+    androidTestImplementation 'com.android.support:recyclerview-v7:' + rootProject.supportLibraryVersion
+    implementation "de.hdodenhof:circleimageview:$rootProject.circleImageVersion"
     /*
             Resolves dependency versions across test and production APKs, specifically, transitive
             dependencies. This is required since Espresso internally has a dependency on support-annotations.
@@ -222,16 +222,16 @@ dependencies {
             excluding these dependencies from your test configuration will result in an dex pre-verifier error
             at runtime. More info in this tools bug: (https://code.google.com/p/android/issues/detail?id=192497)
             */
-    configurations.compile.dependencies.each { compileDependency ->
+    configurations.implementation.dependencies.each { compileDependency ->
         println "Excluding compile dependency: ${compileDependency.getName()}"
-        configurations.androidTestCompile.dependencies.each { androidTestCompileDependency ->
-            configurations.androidTestCompile.exclude module: "${compileDependency.getName()}"
+        configurations.androidTestImplementation.dependencies.each { androidTestCompileDependency ->
+            configurations.androidTestImplementation.exclude module: "${compileDependency.getName()}"
         }
     }
-    compile "org.greenrobot:eventbus:$rootProject.eventbusVersion"
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile "com.balysv:material-ripple:$rootProject.materialRippleVersion"
+    implementation "org.greenrobot:eventbus:$rootProject.eventbusVersion"
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation "com.balysv:material-ripple:$rootProject.materialRippleVersion"
 
     // Glide
-    compile "com.github.bumptech.glide:glide:$rootProject.glideVersion"
+    implementation "com.github.bumptech.glide:glide:$rootProject.glideVersion"
 }
