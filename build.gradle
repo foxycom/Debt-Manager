@@ -3,9 +3,13 @@
 buildscript {
     repositories {
         jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.2'
+        classpath 'com.android.tools.build:gradle:4.1.0'
     }
 }
 
@@ -13,6 +17,10 @@ allprojects {
     repositories {
         jcenter()
         maven { url "https://jitpack.io" }
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
     }
 }
 
@@ -25,12 +33,12 @@ task clean(type: Delete) {
 ext {
     // Sdk and tools
     minSdkVersion = 23
-    targetSdkVersion = 25
-    compileSdkVersion = 25
+    targetSdkVersion = 28
+    compileSdkVersion = 28
     buildToolsVersion = "25.0.2"
 
     // App dependencies
-    supportLibraryVersion = "25.3.1"
+    supportLibraryVersion = "26.1.0"
     junitVersion = "4.12"
     guavaVersion = "19.0"
     mockitoVersion = '1.10.19'
@@ -47,4 +55,23 @@ ext {
     glideVersion = '3.7.0'
     retrolambdaPluginVersion = "3.6.1"
 
+    // We need to use the -P format for properties, so we need to access them using the "project" global variable
+    // So we do not use the 'System.properties.getProperty("carvedTests") ?: "false"' pattern here
+    if ( ! project.hasProperty("jacocoEnabled")) {
+        // Log a warning here
+        println("jacocoEnabled property not defined. Default it to false")
+        jacocoEnabled = "false"
+    }
+    if (! project.hasProperty("carvedTests")) {
+        println("carvedTests property not defined. Default it to false")
+        carvedTests = "false"
+    }
+
+    println "Summary  of props:"
+    println "jacocoEnabled: " + jacocoEnabled.toBoolean()
+    println "carvedTests:   " + carvedTests.toBoolean()
+
+    // Set default values here. Those may be overwritten inside app/build.gradle
+    testReportPrefix = "${buildDir}/carvedTest/testExecution"
+    coverageReportPrefix = "${buildDir}/carvedTest/coverage"
 }
