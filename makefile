@@ -9,6 +9,13 @@ JAVA_OPTS=" -Dabc.instrument.array.operations -Dabc.instrument.fields.operations
 
 INSTRUMENTATION_OPTS=" \
 --skip-class=com.chikeandroid.debtmanager.R \
+--skip-class=com.chikeandroid.debtmanager.DaggerApplicationComponent \
+--skip-class=com.chikeandroid.debtmanager.features.oweme.DaggerOweMeComponent \
+--skip-class=com.chikeandroid.debtmanager.features.addeditdebt.DaggerAddEditDebtComponent \
+--skip-class=com.chikeandroid.debtmanager.features.people.DaggerPeopleComponent \
+--skip-class=com.chikeandroid.debtmanager.features.persondetail.DaggerPersonDetailComponent \
+--skip-class=com.chikeandroid.debtmanager.features.debtdetail.DaggerDebtDetailComponent \
+--skip-class=com.chikeandroid.debtmanager.features.iowe.DaggerIOweComponent \
 --filter-package=java.io \
 --filter-class=java.lang.StringBuilder \
 "
